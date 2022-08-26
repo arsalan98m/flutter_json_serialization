@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:json_serialization/user.dart';
+import 'package:json_serialization/model/complex_user.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   void getUser(BuildContext context) async {
-    final file = await rootBundle.loadString('json/response.json');
+    final file = await rootBundle.loadString('json/complex_response.json');
 
     final json = jsonDecode(file);
 
-    User user = User.fromJson(json["user"]);
+    final ComplexUser user = ComplexUser.fromJson(json["user"]);
 
-    print(user.name);
+    print(user.toJson());
   }
 
   @override

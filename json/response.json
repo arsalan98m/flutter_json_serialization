@@ -1,9 +1,0 @@
-{
-  "user": {
-    "userId": 1,
-    "name": "mark",
-    "email": "mark@something.com",
-    "phone": "1234567",
-    "isActive": true
-  }
-}

@@ -41,3 +41,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+// Note:
+// After Writing models on model folder run command: flutter pub run build_runner build --delete-conflicting-outputs
